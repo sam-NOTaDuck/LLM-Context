@@ -58,6 +58,36 @@ You're performing Enhanced Due Diligence (EDD) audits on telecom and tech entiti
 - 📊 Telecom vs. Enhanced Services classification matrices
 
 ---
+## 🧾 Direct Verification Table
+
+This table outlines the data points you must verify during Enhanced Due Diligence (EDD) audits, along with the corresponding authoritative lookup sources. Use this guide for consistent and accurate sourcing.
+
+| Component                     | Lookup Source / Method                                               |
+|------------------------------|----------------------------------------------------------------------|
+| SOS Entity Status            | State Secretary of State registry (e.g., Delaware Division of Corporations) |
+| Business Address             | SOS registry, USPS address validation tools                          |
+| Registered Agent             | State business registry or formation documents                       |
+| EIN Validation               | IRS TIN matching system (external), FCC Form filings                 |
+| FCC FRN Status               | FCC CORES public registry, Robocall Mitigation Database (RMD)        |
+| FRN–EIN Alignment            | FCC CORES + RMD record cross-reference with IRS                      |
+| RMD Record                   | FCC RMD API or CSV Database Download                                 |
+| Mitigation Plan              | FCC RMD record entry (linked to FRN)                                 |
+| FCC Form 499-A Filing        | USAC Form 499 Filer Database                                         |
+| Website Verification         | Live website check (branding, disclosures, legal entity references)  |
+| FCC Qualification            | FCC classification matrices, service descriptions, industry filings  |
+
+---
+
+### 🛠 How to Use This Table
+
+Use each source to:
+- Confirm legal identity and active status
+- Check federal compliance and reporting obligations
+- Identify missing or misaligned public records
+- Support onboarding risk scoring and technical credibility reviews
+
+
+---
 
 ## 📂 Resources
 
