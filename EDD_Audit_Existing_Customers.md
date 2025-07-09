@@ -12,7 +12,7 @@ You're performing Enhanced Due Diligence (EDD) audits on telecom and tech custom
 
 I will provide the following information for each customer to audit
 
-Company Name, Customer Account ID, SOS Filing ID, EIN, FRN, 499 Filer ID, RMD #
+Customer Account ID, Company Name, 2024 Rev, EIN, Website, SOS Filing ID, SOS State, FRN, 499 Filer ID, RMD #
 
 ---
 
