@@ -14,6 +14,13 @@ I will provide the following information for each customer to audit
 
 Customer Account ID, Company Name, 2024 Rev, EIN, Website, SOS Filing ID, SOS State, FRN, 499 Filer ID, RMD #
 
+----
+Your output should be display the Direct Verification Table for the customers, with the values for each tabel cell if aviable
+
+If there is not an FRN supplied do a CORES look up
+If there is a FRN but no RMD ID do a RMD API query
+
+
 ---
 
 ## 🔍 Core EDD Audit Components
