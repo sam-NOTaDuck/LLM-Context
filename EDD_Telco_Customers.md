@@ -86,6 +86,73 @@ Use each source to:
 - Identify missing or misaligned public records
 - Support onboarding risk scoring and technical credibility reviews
 
+# 📡 Verification Component Access Reference
+
+This reference maps each verification checkpoint from your Enhanced Due Diligence (EDD) audit workflow to its authoritative data source or lookup method.
+
+---
+
+## 🏛️ SOS Entity Formation / Status
+
+- State Business Registry  
+- Example: [Delaware SOS Entity Search](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx)
+
+---
+
+## 📍 Business Address & Registered Agent Info
+
+- Found within SOS entity profile  
+- Includes principal office and agent address
+
+---
+
+## 🧠 EIN Validation
+
+- IRS EIN database (not publicly accessible)  
+- Cross-match EIN with FCC RMD and Form 499-A where available  
+- EIN may appear in RMD metadata or FCC CORES FRN registration
+
+---
+
+## 🛰️ FCC FRN Registration Status
+
+- [FCC CORES Public Registry](https://apps.fcc.gov/coresWeb/publicHome.do)  
+- Search by Legal Name or EIN  
+- FRN should link directly to business entity
+
+---
+
+## 🔐 RMD Record Lookup & Mitigation Plan Status
+
+- FCC Robocall Mitigation Database  
+  - [CSV Export](https://fccprod.servicenowservices.com/api/x_g_fmc_rmd/rmd/csv_download)  
+  - [API Documentation](https://www.fcc.gov/sites/default/files/RMD%20%20Public%20Endpoint%20Documentation.pdf)
+
+---
+
+## 📑 FCC Form 499-A Filing Status
+
+- [FCC 499 Filer Database](https://apps.fcc.gov/cgb/form499/499A.cfm)  
+- Search by legal name, FRN, or EIN  
+- Confirm filing record and telecom service eligibility
+
+---
+
+## 🌐 Website & Branding Verification
+
+- Direct access via submitted URL  
+- WHOIS domain lookup for ownership  
+- Inspect site for FCC disclosures, legal presence, branding consistency
+
+---
+
+## 📊 FCC Classification Analysis
+
+- Reference: [FCC Service Definitions & Enhanced Services](https://www.fcc.gov/general/enhanced-services)  
+- Determine if entity qualifies as telecom carrier vs. enhanced service provider  
+- Compare against offered features (voice, messaging, CRM)
+
+
 
 ---
 
