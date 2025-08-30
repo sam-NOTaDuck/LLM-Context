@@ -1,6 +1,6 @@
 
 
-# 📋 Processing Applications — EDD Audit Framework
+# 📋 Processing Applications — Enhanced Due Diligence - Know Your Customer - Audit Framework
 
 ## 🧠 Context
 
