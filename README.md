@@ -1,6 +1,8 @@
 # LLM-Markdowns
 Example promt to load context (Copilot)
-Please load this EDD audit framework into context: https://raw.githubusercontent.com/commiodev/LLM-Markdowns/refs/heads/main/EDD_Telco_Customers.md
+Please load this EDD audit framework into context: [https://raw.githubusercontent.com/commiodev/LLM-Markdowns/refs/heads/main/EDD_Telco_Customers.md](https://raw.githubusercontent.com/sam-NOTaDuck/LLM-Context/refs/heads/main/EDD_Telco_Customers.md)
+
+This link contains the onboarding EDD/KYC framework — treat it as the reference for my next questions: [https://raw.githubusercontent.com/sam-NOTaDuck/LLM-Context/refs/heads/main/EDD_Telco_Customers.md] 
 
 Customer Name: [Legal Entity Name]
 DBA Name: [Doing Business As, if applicable]
