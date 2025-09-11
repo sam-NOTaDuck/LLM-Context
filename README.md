@@ -4,6 +4,9 @@ Please load this EDD audit framework into context: [https://raw.githubuserconten
 
 This link contains the onboarding EDD/KYC framework — treat it as the reference for my next questions: [https://raw.githubusercontent.com/sam-NOTaDuck/LLM-Context/refs/heads/main/EDD_Telco_Customers.md] 
 
+NEW ONE:  Works
+Please load the context from this page and use it as the reference for my next questions: https://sam-notaduck.github.io/LLM-Context/EDD_Telco_Customers.html
+
 Customer Name: [Legal Entity Name]
 DBA Name: [Doing Business As, if applicable]
 Formation State: [e.g., Delaware]
