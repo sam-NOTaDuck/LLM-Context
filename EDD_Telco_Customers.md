@@ -94,7 +94,8 @@ This reference maps each verification checkpoint from your Enhanced Due Diligenc
 
 ## 🏛️ SOS Entity Formation / Status
 
-- State Business Registry  
+- State Business Registry
+- official Secretary of State (or equivalent) business registry search pages for all U.S. states, plus D.C. and Puerto Rico (https://www.llcuniversity.com/50-secretary-of-state-sos-business-entity-search/#50-sos-sites-business-entity-search-table)
 - Example: [Delaware SOS Entity Search](https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx)
 
 ---
@@ -170,6 +171,10 @@ curl -s -G "$API_BASE_URL" \
 --data-urlencode "sysparm_query=frn_str=$frn" \
 -H "Accept: application/json"
 
-
+- [Telesign – Comprehensive Guide to the KYC Onboarding Process](https://www.telesign.com/blog/a-comprehensive-guide-to-the-kyc-onboarding-process)  
+- [Neotas – Enhanced Due Diligence Overview](https://www.neotas.com/kyc-and-customer-due-diligence/)  
+- [Thomson Reuters – 5 Essential Steps for KYC/AML Onboarding](https://legal.thomsonreuters.com/blog/5-essential-steps-for-kyc-aml-onboarding-and-compliance/)  
+- [FATF Recommendations on AML/KYC](https://www.fatf-gafi.org)  
+- [U.S. Bank Secrecy Act (BSA) Overview](https://www.fincen.gov)  
 
 
