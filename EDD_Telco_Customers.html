@@ -25,6 +25,10 @@ You're performing Enhanced Due Diligence (EDD) audits on telecom and tech entiti
   - Cross-reference EIN with IRS records and FCC filings  
   - Confirm match with legal business name
 
+- **Website and Branding Verification**  
+  - Check live website and verify branding alignment with legal name  
+  - Assess technical credibility and presence of FCC compliance references
+
 - **FCC FRN Registration Status Using FCC CORES and RMD Database**  
   - Confirm active FRN using FCC CORES public registry or FCC Robocall Mitigation Database  
   - Include verified FRN number and cross-reference with legal name and EIN  
@@ -40,13 +44,31 @@ You're performing Enhanced Due Diligence (EDD) audits on telecom and tech entiti
   - Link RMD entry to FRN  
   - Flag missing or mismatched compliance elements
 
-- **Website and Branding Verification**  
-  - Check live website and verify branding alignment with legal name  
-  - Assess technical credibility and presence of FCC compliance references
-
 - **FCC Qualification Analysis**  
   - Determine if the entity qualifies as a voice service provider  
   - Classify using FCC matrices (e.g., Telecom vs. Enhanced Service)
+
+## 🛑 Non-VSP Exemption Handling
+
+If a customer is **not a Voice Service Provider (VSP)**:
+
+- **RMD Registration Not Required** — FCC Robocall Mitigation Database registration is only mandatory for entities providing voice services.
+- Confirm business activities via:
+  - Website content
+  - Customer attestation
+  - Service descriptions in KYC form
+- If exempt:
+  - Record exemption reason (e.g., tax services, SaaS, CRM, enterprise not reselling services etc.)
+  - Skip RMD and FCC Form 499-A checks
+  - Flag for manual review if telecom-related keywords appear
+
+### Example:
+> Entity: NO UP FRONT DOT COM PLLC  
+> Website: noupfront.com  
+> Services: IRS relief and tax resolution  
+> VSP Status: ❌ Not a VSP  
+> RMD Registration: Not required  
+> Action: Mark as exempt from FCC telecom compliance checks
 
 ---
 
