@@ -1,130 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EDD_thinQ_Customers Audit Framework</title>
+    <title>EDD/KYC Audit Framework</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
         h1, h2, h3 { color: #2c3e50; }
-        .section { margin-bottom: 40px; }
-        .tag { font-weight: bold; padding: 4px 8px; border-radius: 4px; }
-        .compliant { background-color: #d4edda; color: #155724; }
-        .followup { background-color: #fff3cd; color: #856404; }
-        .exempt { background-color: #f8d7da; color: #721c24; }
-        pre.mermaid { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
+        .tag { font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+        .tag-ok { background-color: #2ecc71; color: white; }
+        .tag-warn { background-color: #f39c12; color: white; }
+        .tag-fail { background-color: #e74c3c; color: white; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
     </style>
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
-    </script>
 </head>
 <body>
 
-<h1>📋 EDD_thinQ_Customers Audit Framework</h1>
+<!--
+⚠️ AI Parsing Instruction:
+When processing KYC or EDD forms:
+1. Detect selected options for radio buttons and checkboxes.
+   - If multiple options (Yes/No/Unsure) appear, confirm which one is marked or filled.
+   - Use visual indicators (●, ⬤, checked boxes) or positional context.
+2. Do NOT assume defaults; verify actual selection.
+3. Cross-check extracted answers against expected fields:
+   - Reseller Status
+   - STIR/SHAKEN Implementation
+   - US Telecom Group Membership
+4. If ambiguity exists, flag for manual review instead of guessing.
+-->
 
-<p><strong>⚠️ AI Instruction:</strong> Always re-read this file in full before responding. Do not assume structure or content. Verify all sections explicitly.</p>
+<h1>📋 Enhanced Due Diligence (EDD) / Know Your Customer (KYC) Audit Framework</h1>
+<p><strong>Last Updated:</strong> 2025-10-20</p>
 
-<div class="section" id="context">
-    <h2>🧠 Context</h2>
-    <p>This framework supports Enhanced Due Diligence (EDD) audits for telecom and tech entities onboarding with Commio/ThinQ. Each customer application triggers this workflow unless otherwise noted.</p>
-</div>
+<h2 id="core-components">🔍 Core EDD Audit Components</h2>
+<ul>
+    <li><strong>Customer Identity Verification</strong></li>
+    <li><strong>Website and Branding Verification</strong>
+        <ul>
+            <li>Check live website and verify branding alignment with legal name</li>
+            <li>Assess technical credibility and presence of FCC compliance references</li>
+        </ul>
+    </li>
+    <li><strong>Non-VSP Exemption Handling</strong>
+        <ul>
+            <li>If the customer is <strong>not a Voice Service Provider (VSP)</strong>:
+                <ul>
+                    <li><span class="tag tag-fail">❌ Exempt</span> — RMD registration not required</li>
+                    <li>Confirm business activities via website, attestation, or KYC form</li>
+                    <li>Record exemption reason and skip FCC-specific checks</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>FCC Qualification Analysis</strong>
+        <ul>
+            <li>Determine if the entity qualifies as a voice service provider</li>
+            <li>Classify using FCC matrices (e.g., Telecom vs. Enhanced Service)</li>
+        </ul>
+    </li>
+    <li><strong>FCC FRN Registration Status</strong></li>
+    <li><strong>FCC Form 499-A Filing Check</strong></li>
+    <li><strong>RMD Record Lookup and Mitigation Plan Review</strong></li>
+</ul>
 
-<div class="section" id="identity-verification">
-    <h2>🔍 Customer Identity Verification</h2>
-    <ul>
-        <li>Legal Name, DBA</li>
-        <li>Formation State or Country</li>
-        <li>Business Address</li>
-        <li>EIN / TIN</li>
-    </ul>
-    <span class="tag compliant">✅ Fully Compliant</span>
-</div>
+<h2 id="audit-tags">✅ Audit Outcome Tags</h2>
+<ul>
+    <li><span class="tag tag-ok">✅ Fully Compliant</span></li>
+    <li><span class="tag tag-warn">⚠️ Needs Follow-Up</span></li>
+    <li><span class="tag tag-fail">❌ Exempt</span></li>
+</ul>
 
-<div class="section" id="website-branding">
-    <h2>🌐 Website and Branding Verification</h2>
-    <ul>
-        <li>Check live website and verify branding alignment with legal name</li>
-        <li>Assess technical credibility and presence of FCC compliance references</li>
-    </ul>
-    <span class="tag followup">⚠️ Needs Follow-Up</span>
-</div>
-
-<div class="section" id="non-vsp-exemption">
-    <h2>🛑 Non-VSP Exemption Handling</h2>
-    <p>If the customer is <strong>not a Voice Service Provider (VSP)</strong>:</p>
-    <ul>
-        <li>RMD registration is <strong>not required</strong></li>
-        <li>Confirm business activities via website, attestation, or KYC form</li>
-        <li>Record exemption reason and skip FCC-specific checks</li>
-    </ul>
-    <p><strong>Example:</strong><br>
-    Entity: NO UP FRONT DOT COM PLLC<br>
-    Services: IRS relief and tax resolution<br>
-    VSP Status: ❌ Not a VSP<br>
-    Action: Exempt from FCC telecom compliance checks</p>
-    <span class="tag exempt">❌ Exempt</span>
-</div>
-
-<div class="section" id="fcc-qualification">
-    <h2>📡 FCC Qualification Analysis</h2>
-    <ul>
-        <li>Determine if the entity qualifies as a voice service provider</li>
-        <li>Classify using FCC matrices (e.g., Telecom vs. Enhanced Service)</li>
-    </ul>
-</div>
-
-<div class="section" id="fcc-frn">
-    <h2>🗂 FCC FRN Registration Status</h2>
-    <ul>
-        <li>Confirm active FRN using FCC CORES public registry or RMD</li>
-        <li>Cross-reference with legal name and EIN</li>
-    </ul>
-</div>
-
-<div class="section" id="fcc-499a">
-    <h2>📄 FCC Form 499-A Filing Check</h2>
-    <ul>
-        <li>Confirm registration and filing status</li>
-        <li>Flag unregistered entities providing telecom services</li>
-    </ul>
-</div>
-
-<div class="section" id="rmd-check">
-    <h2>📊 RMD Record Lookup and Mitigation Plan Review</h2>
-    <ul>
-        <li>Validate presence of mitigation plan</li>
-        <li>Link RMD entry to FRN</li>
-        <li>Flag missing or mismatched compliance elements</li>
-    </ul>
-</div>
-
-<div class="section" id="flowchart">
-    <h2>🧭 Audit Flowchart</h2>
-    <pre class="mermaid">
-flowchart TD
+<h2 id="flowchart">📊 Audit Flowchart</h2>
+<p>Use the following Mermaid syntax to visualize the audit logic:</p>
+<pre><code>
+graph TD
     A[Start Audit] --> B[Website & Branding Verification]
     B --> C{Is VSP?}
-    C -- No --> D[Apply Non-VSP Exemption]
-    D --> E[End Audit]
-    C -- Yes --> F[FCC Qualification Analysis]
-    F --> G[FCC FRN Check]
-    G --> H[FCC Form 499-A Check]
-    H --> I[RMD Lookup & Mitigation Review]
-    I --> E
-    E[End Audit]
-    </pre>
-</div>
+    C -- No --> D[Mark as Exempt ❌]
+    C -- Yes --> E[FCC Qualification Analysis]
+    E --> F[FCC FRN Check]
+    F --> G[Form 499-A Check]
+    G --> H[RMD Lookup]
+    H --> I[Audit Outcome]
+</code></pre>
 
-<div class="section" id="optional">
-    <h2>🧩 Optional Add-On Requests</h2>
-    <ul>
-        <li>Direct verification of website content</li>
-        <li>Fraud alert scoring and behavioral analysis</li>
-        <li>Partner/reseller validation</li>
-        <li>Telecom vs. Enhanced Services classification matrices</li>
-    </ul>
-</div>
+<h2 id="optional">🧩 Optional Add-On Requests</h2>
+<ul>
+    <li>Direct verification of website content</li>
+    <li>Fraud alert scoring and behavioral analysis</li>
+    <li>Partner/reseller validation</li>
+    <li>Telecom vs. Enhanced Services classification matrices</li>
+</ul>
 
 </body>
 </html>
