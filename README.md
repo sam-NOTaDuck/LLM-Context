@@ -16,3 +16,6 @@ FCC FRN: [FRN Number]
 FCC Form 499-A Filer ID: [If applicable]
 RMD: [RMD Number]
 Website URL: [https://example.com]
+
+The New Style:  
+Please load the context from this page and use it as the reference for my next questions: https://sam-notaduck.github.io/LLM-Context/KYC-ThinQ.html
