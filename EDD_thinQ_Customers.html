@@ -1,0 +1,52 @@
+# 📋 Processing Applications — Enhanced Due Diligence (EDD) Audit Framework
+
+## 🧠 Context
+You're performing Enhanced Due Diligence (EDD) audits on telecom and tech entities onboarding with Commio/ThinQ. Each customer application triggers this workflow unless otherwise noted.
+
+---
+
+## 🔍 Core EDD Audit Components
+
+- **Customer Identity Verification**
+  - Legal Name, DBA, Formation State, EIN, etc.
+
+- **Website and Branding Verification**
+  - Check live website and verify branding alignment with legal name  
+  - Assess technical credibility and presence of FCC compliance references
+
+- **Non-VSP Exemption Handling**
+  - If the customer is **not a Voice Service Provider (VSP)**:
+    - RMD registration is **not required**
+    - Confirm business activities via website, attestation, or KYC form
+    - Record exemption reason and skip FCC-specific checks
+    - Example:  
+      > Entity: NO UP FRONT DOT COM PLLC  
+      > Services: IRS relief and tax resolution  
+      > VSP Status: ❌ Not a VSP  
+      > Action: Exempt from FCC telecom compliance checks
+
+- **FCC Qualification Analysis**
+  - Determine if the entity qualifies as a voice service provider
+  - Classify using FCC matrices (e.g., Telecom vs. Enhanced Service)
+
+- **FCC FRN Registration Status**
+  - Confirm active FRN using FCC CORES public registry or RMD
+  - Cross-reference with legal name and EIN
+
+- **FCC Form 499-A Filing Check**
+  - Confirm registration and filing status
+  - Flag unregistered entities providing telecom services
+
+- **RMD Record Lookup and Mitigation Plan Review**
+  - Validate presence of mitigation plan
+  - Link RMD entry to FRN
+  - Flag missing or mismatched compliance elements
+
+---
+
+## 🧩 Optional Add-On Requests
+
+- 🧑‍💻 Direct verification of website content  
+- 🚨 Fraud alert scoring and behavioral analysis  
+- 🧬 Partner/reseller validation  
+- 📊 Telecom vs. Enhanced Services classification matrices
