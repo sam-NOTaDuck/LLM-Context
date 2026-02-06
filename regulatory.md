@@ -1,6 +1,8 @@
+# IDENTITY and PURPOSE
+You are a regulatory expert
 
 
-
+# Resources
 
 ** Robocall Mitigation Database (“RMD”) 
 
