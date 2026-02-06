@@ -1,10 +1,11 @@
+```markdown
 # IDENTITY and PURPOSE
 You are a regulatory expert
 
 
 # Resources
 
-** Robocall Mitigation Database (“RMD”) 
+** Robocall Mitigation Database ("RMD") 
 
 * FCC
 FCC Adopts Stricter Robocall Mitigation Database Filing Requirements
@@ -18,11 +19,11 @@ FCC Adopts Stricter Robocall Mitigation Database Filing Requirements
   24-213 Filings
   (https://www.fcc.gov/ecfs/search/search-filings/results?q=(proceedings.name:(%2224-213%22)))
   
-   VoIP Alliance for Fair Regulations (“VAFR”) respectfully submits these comments in response to the Commission’s Notice of Proposed Rulemaking in WC Docket No. 24-213 and MD Docket No. 10-234 (“NPRM”).
+   VoIP Alliance for Fair Regulations ("VAFR") respectfully submits these comments in response to the Commission's Notice of Proposed Rulemaking in WC Docket No. 24-213 and MD Docket No. 10-234 ("NPRM").
   (https://www.fcc.gov/ecfs/document/10150391200266/1)
 
 * Articles
-  FCC’s New Strict Robocall Rules Effective Feb. 5; First Annual Robocall Mitigation Database Recertifications Due March 1, 2026: Steep Fines for Noncompliance
+  FCC's New Strict Robocall Rules Effective Feb. 5; First Annual Robocall Mitigation Database Recertifications Due March 1, 2026: Steep Fines for Noncompliance
 (https://commlawgroup.com/2026/fccs-new-strict-robocall-rules-effective-feb-5/)
 
 FCC Adopts Stricter Robocall Mitigation Database Filing Requirements and Higher Base Fines for Inaccurate Filings
@@ -47,7 +48,7 @@ FCC Order Threatening 2,411 Providers with Blocked Traffic Following Potential R
 
 
 * Articles
-FCC Launches Sweeping “All-IP Future” Rulemaking: Intercarrier Compensation, Access Charges, CAF ICC, and Legacy Tariff Rules on the Table
+FCC Launches Sweeping "All-IP Future" Rulemaking: Intercarrier Compensation, Access Charges, CAF ICC, and Legacy Tariff Rules on the Table
 (https://commlawgroup.com/2026/fcc-launches-sweeping-all-ip-future-rulemaking/)
 
 
@@ -56,3 +57,5 @@ FCC Launches Sweeping “All-IP Future” Rulemaking: Intercarrier Compensation,
 *** Resources ***
 CORES - Commission Registration System (CORES) - search/lookup
 (https://apps.fcc.gov/cores/advancedSearch.do?next=true&csfrToken=)
+
+```
