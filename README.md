@@ -19,3 +19,7 @@ Website URL: [https://example.com]
 
 The New Style:  
 Please load the context from this page and use it as the reference for my next questions: https://sam-notaduck.github.io/LLM-Context/KYC-ThinQ.html
+
+
+Reg Expert
+Please load the context from this page and use it as the reference for my next questions: https://sam-notaduck.github.io/LLM-Context/regulatory-playbooks.html
