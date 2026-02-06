@@ -27,11 +27,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    // Embedded markdown content
-    const md = `
-````markdown
-```markdown
+  <script id="md" type="text/plain">
 # IDENTITY AND PURPOSE
 You are a U.S.-focused regulatory expert for telecom and KYC/AML compliance, addressing legal and compliance teams.
 
@@ -112,11 +108,50 @@ You are a U.S.-focused regulatory expert for telecom and KYC/AML compliance, add
 
 ### STIR/SHAKEN Deployment Playbook Path A: Self-Hosted Token Issuance
 
-**Phase 1: Architecture & Certificate Planning (Weeks 1–2)**n... (truncated for brevity in HTML)
-```
-`;
+**Phase 1: Architecture & Certificate Planning (Weeks 1–2)**
 
-    // Render markdown into the content element
+1. **Select or designate a Service Provider Code (SPC)**
+   - [ ] Obtain or designate your SPC (registered with FS authority or industry registry)
+   - [ ] SPC is typically a 10–digit identifier assigned by NANC or telecom registry
+   - [ ] Document SPC and keep accessible for certificate applications
+
+2. **Plan certificate infrastructure**
+   - [ ] Identify Certification Authority (CA) or STI-PA (Policy Administrator) approved for STIR/SHAKEN
+     - Examples: Entrust, DigiCert, or STIR/SHAKEN consortium CAs
+   - [ ] Determine key storage strategy: HSM (hardware security module), cloud KMS, or on-prem vault
+   - [ ] Define certificate lifecycle: expiry periods, rotation schedule, renewal workflow
+   - [ ] Plan for backup/redundancy (e.g., standby key pair, secondary CA fallback)
+
+3. **Assess existing SIP signaling infrastructure**
+   - [ ] Audit current SIP proxies, session border controllers (SBCs), and media gateways
+   - [ ] Determine which elements will be STIR/SHAKEN signers (originators) vs. verifiers (terminators)
+   - [ ] Identify network paths for call origination (direct SIP trunks, peering, ITSP partners)
+   - [ ] Document originating account types (PBX, softphone, VoIP subscriber, API-driven) and their trust levels
+   - [ ] **Decision:** Which account types warrant Full attestation vs. Partial attestation?
+     - Full attestation = user authenticated at origination (highest confidence)
+     - Partial attestation = user not directly authenticated but call routing verified (lower confidence)
+     - Gateway-validated = 3rd party peer authenticated the call before handing to you (pass-through)
+
+4. **Engage and contract with CA for token provisioning**
+   - [ ] Select CA and sign Service Agreement for STIR/SHAKEN certificate provisioning
+   - [ ] Request SPC-scoped certificates (one per signing gateway or key pair)
+   - [ ] Define Certificate Request procedures (automated CSR or manual request process)
+   - [ ] Establish contact procedures for emergencies (key compromise, revocation)
+
+**Phase 2: Token Issuance & Key Management Implementation (Weeks 3–6)**
+
+5. **Deploy or upgrade SIP signaling to support STIR/SHAKEN signing**
+   - [ ] Configure SIP proxy / SBC with STIR/SHAKEN signing module or middleware
+     - Options: OpenSIPS with libstirshaken, Sonus/Ribbon SBC with STIR/SHAKEN, Metaswitch, others
+   - [ ] Integrate private key storage (HSM, cloud KMS, or vault) with signing appliance
+   - [ ] Test key access and signing latency (should be <50ms per call)
+   - [ ] Configure key rotation schedule and automated renewal process
+   - [ ] Deploy redundant signing nodes (if available) for resilience
+
+... (file continues)
+  </script>
+  <script>
+    const md = document.getElementById('md').textContent;
     document.getElementById('content').innerHTML = marked.parse(md);
   </script>
 </body>
