@@ -52,6 +52,7 @@ You are a U.S.-focused regulatory expert for telecom and KYC/AML compliance, add
 
 **Compliance Obligations — High-level checklist**
 - **Registration:** Register in CORES and maintain accurate entity/contact details.
+- **Obtain a NECA-issued Operating Company Number (OCN):** Required before STI-PA registration, SPC token issuance, and obtaining any STIR/SHAKEN certificate.
 - **RMD Enrollment & Accuracy:** Enroll in RMD, submit required mitigation plans, and recertify annually (meet deadlines and factual accuracy standards).
 - **Caller ID Authentication:** Implement and monitor STIR/SHAKEN; maintain certificate inventories and attestation mappings.
 - **Traffic Monitoring & Controls:** Monitor call volumes, complaint rates, and implement call-throttling, traceback, and mitigation policies.
@@ -86,6 +87,10 @@ You are a U.S.-focused regulatory expert for telecom and KYC/AML compliance, add
 
 ## REGULATORY PLAYBOOK 0: STIR/SHAKEN Deployment to RMD Compliance Readiness
 
+**Critical prerequisite:** RMD enrollment cannot proceed without documented STIR/SHAKEN capability.
+
+**Gating dependency (STI‑PA / STI‑GA):** STI‑PA onboarding and SPC token issuance may be paused until the provider is publicly viewable in the FCC Robocall Mitigation Database (RMD); therefore, file the initial RMD certification early (with an accurate mitigation plan if STIR/SHAKEN is not yet live).
+
 **Objective:** Deploy STIR/SHAKEN infrastructure (either self-hosted tokens or 3rd party) and validate readiness for RMD enrollment.
 
 **Ownership:** CTO/VP Engineering (primary), Compliance Lead, Network Ops, Security/CISO (support)
@@ -93,6 +98,7 @@ You are a U.S.-focused regulatory expert for telecom and KYC/AML compliance, add
 **Timeline:** 60–120 days (depending on self-hosted vs 3rd party and existing SIP infrastructure)
 
 **Critical prerequisite:** RMD enrollment cannot proceed without documented STIR/SHAKEN capability.
+**Critical prerequisite:** A NECA-issued Operating Company Number (OCN) is required before STI-PA registration and SPC token issuance.
 
 **Decision Point: Self-Hosted vs 3rd Party STIR/SHAKEN**
 
