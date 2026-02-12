@@ -702,12 +702,72 @@ After completing either Path A (self-hosted) or Path B (3rd party), proceed to *
 - Example FCC dockets referenced in workspace: FCC Adopts Stricter Robocall Mitigation Database Filing Requirements (see FCC releases).
 - NAAG letter re: RMD: https://www.naag.org/policy-letter/a-bipartisan-coalition-of-47-attorneys-general-call-on-the-fcc-to-strengthen-the-robocall-mitigation-database/
 - FinCEN / BSA guidance: https://www.fincen.gov
+- Law Firm: https://www.lermansenter.com/broadband/
+- Law Firm: https://commlawgroup.com/insights-and-advisories/
+
+---
+
+## 🛰️ FCC FRN Registration Status
+
+- [FCC CORES Public Registry](https://apps.fcc.gov/coresWeb/publicHome.do)  
+- Search by Legal Name or EIN  
+- FRN should link directly to business entity
+
+---
+
+## 🔐 RMD Record Lookup & Mitigation Plan Status
+
+- FCC Robocall Mitigation Database  
+  - [CSV Export](https://fccprod.servicenowservices.com/api/x_g_fmc_rmd/rmd/csv_download)  
+  - [API Documentation](https://www.fcc.gov/sites/default/files/RMD%20%20Public%20Endpoint%20Documentation.pdf)
+
+---
+
+## 📑 FCC Form 499-A Filing Status
+
+- [FCC 499 Filer Database](https://apps.fcc.gov/cgb/form499/499A.cfm)  
+- Search by legal name, FRN, or EIN  
+- Confirm filing record and telecom service eligibility
+
+---
+
+## 🌐 Website & Branding Verification
+
+- Direct access via submitted URL  
+- WHOIS domain lookup for ownership  
+- Inspect site for FCC disclosures, legal presence, branding consistency
+
+---
+
+## 📊 FCC Classification Analysis
+
+- Reference: [FCC Service Definitions & Enhanced Services](https://www.fcc.gov/general/enhanced-services)  
+- Determine if entity qualifies as telecom carrier vs. enhanced service provider  
+- Compare against offered features (voice, messaging, CRM)
+
 
 
 ---
 
-If you want, I can now:
-- Expand each playbook into step-by-step runbooks with checklists and templates.
-- Populate the file with specific citations (FCC order numbers & links) and short-form template responses/letters.
+## 📂 Resources
+
+- Robocall Mitigation Database: [FCC RMD CSV Download](https://fccprod.servicenowservices.com/api/x_g_fmc_rmd/rmd/csv_download)  
+- RMD API Documentation: [FCC Endpoint Guide](https://www.fcc.gov/sites/default/files/RMD%20%20Public%20Endpoint%20Documentation.pdf)  
+- RMD/FRN API Lookup Template:
+
+```bash
+API_BASE_URL="https://fccprod.servicenowservices.com/api/x_g_fmc_rmd/rmd/public"
+frn=the FRN of the customer
+
+curl -s -G "$API_BASE_URL" \
+--data-urlencode "sysparm_query=frn_str=$frn" \
+-H "Accept: application/json"
+
+- [Telesign – Comprehensive Guide to the KYC Onboarding Process](https://www.telesign.com/blog/a-comprehensive-guide-to-the-kyc-onboarding-process)  
+- [Neotas – Enhanced Due Diligence Overview](https://www.neotas.com/kyc-and-customer-due-diligence/)  
+- [Thomson Reuters – 5 Essential Steps for KYC/AML Onboarding](https://legal.thomsonreuters.com/blog/5-essential-steps-for-kyc-aml-onboarding-and-compliance/)  
+- [FATF Recommendations on AML/KYC](https://www.fatf-gafi.org)  
+- [U.S. Bank Secrecy Act (BSA) Overview](https://www.fincen.gov)  
+
 
 ```
