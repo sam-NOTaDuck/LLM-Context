@@ -734,6 +734,59 @@ After completing either Path A (self-hosted) or Path B (3rd party), proceed to *
 - Confirm filing record and telecom service eligibility
 
 ---
+# STIR/SHAKEN: Iconectiv Authorized Service Provider List
+
+### Purpose  
+The Iconectiv **Authorized STIR/SHAKEN Service Provider List** is an official compliance resource used to verify whether a communications service provider has been validated by the STIR/SHAKEN Policy Administrator and is authorized to participate in the U.S. call authentication ecosystem. Iconectiv, acting as the **STI‑PA (Policy Administrator)**, is responsible for verifying service providers, issuing Service Provider Code (SPC) tokens, and maintaining the authoritative list of all providers eligible to request SHAKEN certificates. [1](https://authenticate.iconectiv.com/faq-authenticate)
+
+Providers listed here have successfully completed required validation steps, including confirmation of identity and authorization, and have been granted eligibility to receive SHAKEN certificates from approved Certification Authorities. [2](https://www.mrleng.com/regulatory/stir-shaken-compliance/)
+
+---
+
+### Regulatory Significance  
+
+1. **Provider Identity Verification**  
+   The provider has been verified by Iconectiv as a legitimate service provider authorized to participate in the STIR/SHAKEN trust framework.  
+   [1](https://authenticate.iconectiv.com/faq-authenticate)
+
+2. **SPC Token Issuance**  
+   Iconectiv has issued a valid Service Provider Code (SPC) token, which certifies that the provider is authorized to request STIR/SHAKEN certificates.  
+   [1](https://authenticate.iconectiv.com/faq-authenticate)
+
+3. **Certificate Eligibility**  
+   The provider is authorized to obtain digital certificates from approved Certification Authorities — a requirement to sign calls under STIR/SHAKEN.  
+   [2](https://www.mrleng.com/regulatory/stir-shaken-compliance/)
+
+4. **Participation in Call Authentication**  
+   The provider is authorized to generate and apply signed PASSporTs used for caller ID authentication and attestation under the STIR/SHAKEN framework.  
+   [3](https://opensips.org/events/Summit-2023Houston/assets/presentations/OpenSIPS_Summit_2023_Alec_Fenichel_STIR_SHAKEN_Overview.pdf)
+
+---
+
+### LLM Usage Rules
+
+#### If the provider appears on the Iconectiv Authorized Provider List:
+- Treat them as **validated**, **authorized**, and **eligible** to participate in STIR/SHAKEN.  
+- Assume they possess a valid SPC token.  
+- Consider them capable of obtaining and using SHAKEN certificates.  
+- Treat them as having passed required administrative and identity‑verification steps.
+
+#### If the provider does *not* appear on the list:
+- Do **not** assume STIR/SHAKEN compliance.  
+- Do **not** assume certificate eligibility or signing authority.  
+- Treat their STIR/SHAKEN status as **unverified**.
+
+#### Usage Boundaries:
+- This list is **not** a telecom directory.  
+- Use it **only** to validate authorization, identity verification, and certificate eligibility within the STIR/SHAKEN trust framework.  
+- Do not infer service quality, traffic behavior, or attestation levels solely from list presence.
+
+---
+
+### Source URL  
+**Iconectiv Authorized STIR/SHAKEN Service Providers:**  
+https://authenticate.iconectiv.com/authorized-service-providers-authenticate
+---
 
 ## 🌐 Website & Branding Verification
 
